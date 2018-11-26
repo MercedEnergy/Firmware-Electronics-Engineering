@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+
+\usepackage{physics}
+\usepackage{siunitx} 
+\usepackage{enumerate} 
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+\begin{document}
+
+\title{Setting Up Arduino Environment}
+\author{Ramiro Gonzalez}
+\date{\today}
+
+\maketitle
+
+\begin{Objective}
+	This project will provide background of what an Arduino is. Will enumerate the necessary component and prerequisites required to complete future projects.  
+\end{Objective}
+
+\section*{Background}
+	An Arduino is a smart board, it contains many input and output peripherals. It contains a microcontroller that can be programmed using the Arduino programming language. In order to make a functional project one must understand basic electronics, so that the microcontroller can interact with components such as LED, motor, buttons and much more. The following website  \color{red} \href{www.arduino.cc}{arduino.cc} \color{black} consists of documentation and will serve as a reference. 
+\section*{Material}
+We will besing duinokit, or arduino uno. The duino kit has an \color{red} \href{https://drive.google.com/file/d/0B4XGOMubJWWralp1TlBEcnI4NnM/view?usp=sharing}{instruction booklet} \color{black}
+\begin{todolist}
+    \item Computer 
+    \item Arduino Board.
+    \item USB cable
+    \item Internet Connection
+\end{todolist}
+\section{Tasks}
+Complete the following tasks. Note that different operating systems require different steps. Make sure to reference \href{www.arduino.cc}{Arduino.cc}
+\section*{Task 1}
+Install Arduino Software onto computer. 
+\begin{todolist}
+	  \item Arduino IDE (Integrated Development Environment) \\
+	  \color{red} 
+	  \href{https://www.arduino.cc/en/Main/Software}{Arduino.cc Software Section}\color{black} 
+	  \item You may also use the online ardunio web editor. 
+\end{todolist}
+\section*{Task 2} 
+\begin{todolist}
+    \item Open the Arduino Software
+    \item Get familiar with the interface. What do buttons do? 
+\end{todolist}
+The software is divided into six major parts. Find the following. 
+\begin{todolist}
+    \item Menu Bar, Tool Bar, Sketch Tab
+    \item Code Space . This is where code is written and edited. 
+    \item Status Display. This is the display console, where messages will appear. Messages may be errors or possible problems. 
+\end{todolist}
+\section*{Task 3}
+Arduino board's green light flashing means everything is set up correctly. 
+\begin{todolist}
+    \item Connect computer to Arduino. 
+    \item Open Software. 
+    \item Find the right board. Under Tools $\rightarrow$ Board
+    \item Find the correct port. Under Tools $\rightarrow$ Port
+\end{todolist}
+\section*{If Installation Fails}
+\begin{todolist}
+    \item Check your port. Under Tools $\rightarrow$ Port 
+    \item Check your board. Under Tools $\rightarrow$ Board
+    \begin{itemize}
+        \item For duinokit this is "Ardunio Nano" 
+    \end{itemize}
+    \item Read the error message and refer to website arduino.cc
+\end{todolist}
+\section*{Task 4}
+To make sure Arduino is set up properly, upload some code. 
+\begin{todolist}
+    \item In the Arduino IDE go to File $\rightarrow$ Examples $\rightarrow$ 01. Basics $\rightarrow$ Blink
+    \begin{itemize}
+        \item Here you will find pre written code, that can be uploaded to the Arduino. 
+    \end{itemize}
+    \item Make sure you are using the right port. Under Tools $\rightarrow$ Port
+    \begin{itemize}
+        \item For windows it is labeled as COM, Find the right one by disconnecting and connecting board. 
+    \end{itemize}
+    \item The "upload" button uploads code to arduino. 
+\end{todolist}
+\section*{Task 5}
+\begin{todolist}
+    \item Go through the code provided. 11-29-2018.ino 
+    \begin{itemize}
+        \item .ino is the extension for code written in Arduino IDE. 
+        \item They are reffered to as "sketches" 
+    \end{itemize}
+\end{todolist}
+\section*{Summary}
+The end goal is that you are able to interact with the arduino. Configuration depends on the Operating System as well as the version of the Arduino Board, older boards require installation of drivers. We will be using the Arduino Board from duinokit.com. 
+\end{document}
