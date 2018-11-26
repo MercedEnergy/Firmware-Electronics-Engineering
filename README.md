@@ -10,6 +10,9 @@ Understand hardware by creating projects using Arduino and Raspberry PI. <br>
 Skills to acquire: C++, Python, Circuits, PCB Design. 
 ## About
 The Firmware Electronics Engineering team was officially created 11-29-2018
+## Files 
+- Meetings 
+- Projects
 ## Members 
 Fall 2018 
 - Ramiro Gonzalez 
