@@ -25,14 +25,18 @@ Fall 2018
 - Organized by date of delivery
 #### Projects: 
 - Minor projects are to be organized by date of delivery. 
-  - Documentation inside project name folder. 
-  - Code 
-- Major projects to be organized by name of project 
   * Documentation
     - Methodology
     - Instructions Manual 
     - List of components 
   * Code  
     - Consists of all code  
+- Major projects to be organized by name of project 
+  * Documentation
+    - Methodology
+    - Instructions Manual 
+    - List of components 
+  * Code  
+    - Consists of all code   
 #### docs
 - Web Page for Software Engineering Team 
