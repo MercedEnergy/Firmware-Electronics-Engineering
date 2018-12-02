@@ -34,6 +34,5 @@ Fall 2018
     - List of components 
   * Code  
     - Consists of all code  
-    - 
 #### docs
 - Web Page for Software Engineering Team 
