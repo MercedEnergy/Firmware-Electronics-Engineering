@@ -39,4 +39,6 @@ Fall 2018
   * Code  
     - Consists of all code   
 #### docs
-- Web Page for Software Engineering Team 
+- Web Page for Firmware-Electronics-Engineering Team 
+## Sources & References 
+Amariei, Cornel. Arduino Development Cookbook. Packt Publishing, 2015.
