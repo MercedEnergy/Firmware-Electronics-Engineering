@@ -4,3 +4,5 @@ Files are organized by date of delivery. They are to be updated and improved by 
 Meetings will consist of going through or creating the files. Meetings may be physical or remotely. 
 ## November 29, 2018 
 ### 01 - Preliminaries  
+## December 06, 2018
+### 02 - Arduino: Functions & Definitions 
