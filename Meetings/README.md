@@ -5,4 +5,4 @@ Meetings will consist of going through or creating the files. Meetings may be ph
 ## November 29, 2018 
 ### 01 - Preliminaries  
 ## December 06, 2018
-### 02 - Arduino: Functions & Definitions 
+### 02 - Arduino: Builtin Functions & Definitions 
