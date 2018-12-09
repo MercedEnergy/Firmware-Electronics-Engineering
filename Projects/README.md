@@ -9,7 +9,8 @@
     - Instructions Manual 
     - List of components 
   * Code  
-    - Consists of all code  
+    - Consists of all code 
+    - Files must be inside a folder in order to run. 
 - Major projects to be organized by name of project 
   * Documentation
     - Methodology
