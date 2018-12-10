@@ -1,7 +1,9 @@
 # Projects 
-## December 29, 2018
+## November 29, 2018
 - Setting Up Arduino Environment
 - Arduino Programming: Introduction & Global Variables 
+## December 13, 2018 
+- LED Playground 
 ## Organizational Conventions
 - Minor projects are to be organized by date of delivery. 
   * Documentation
