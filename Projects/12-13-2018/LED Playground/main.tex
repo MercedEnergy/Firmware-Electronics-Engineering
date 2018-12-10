@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+
+\usepackage{physics}
+\usepackage{siunitx} 
+\usepackage{enumerate} 
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{xcolor} % for setting colors
+
+% set the default code style
+\lstset{
+    frame=tb, % draw a frame at the top and bottom of the code block
+    tabsize=4, % tab space width
+    showstringspaces=false, % don't mark spaces in strings
+    numbers=left, % display line numbers on the left
+    commentstyle=\color{green}, % comment color
+    keywordstyle=\color{blue}, % keyword color
+    stringstyle=\color{red} % string color
+}
+
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+\begin{document}
+
+\title{LED Playground}
+\author{Ramiro Gonzalez}
+\date{December 13, 2018}
+
+\maketitle
+
+\begin{Objective}
+	This project introduces LEDs (Light Emitting Diode). After completing this project one should be able to describe, handle, and use an LED.  Using an arduino to turn on and off the LED. You will be working with the internal LED and setting up an external LED. 
+\end{Objective}
+
+\section*{Background}
+	An LED is a very important source of light for projects, and devices. LEDs come in different colors, this depends on "band gap". LEDs are generally found in elctronic components, such as remote controls, microwaves, lamps and many more. 
+\section*{Material}
+We will assume you are using th duinokit. It may work arduino uno. The duino kit has an \color{red} \href{https://drive.google.com/file/d/0B4XGOMubJWWralp1TlBEcnI4NnM/view?usp=sharing}{instruction booklet} \color{black}  
+\begin{todolist}
+    \item Computer 
+    \item Arduino Board, Arduino Nano. (DuinoKit) 
+    \item USB cable
+    \item Jumper Cables
+    \item LEDs
+    \item Internet Connection
+\end{todolist}
+\section{Tasks}
+Complete the following tasks. Note that different operating systems require different steps. Make sure to use the following reference \href{www.arduino.cc}{Arduino.cc}
+\section*{Task 1}
+Connect Arduino to computer. 
+\begin{todolist}
+    \item Plug USB to arduino and computer. 
+    \item Open Arduino IDE
+    \item Tools $\rightarrow $ Board : Arduino Nano (The type of board you are using) 
+    \item Tools $\rightarrow$ Port : COM5 
+    \item TOols $\rightarrow$ Processor : Atmega328p (old bootloader) 
+    \item Make sure everything is configured correctly. 
+    \item Optional: Copy Empty.ino onto the IDE, save and upload sketch.  An LED will blink, and stop, this shows that sketch is being uploaded. 
+\end{todolist}
+\begin{lstlisting}[language=C++, caption={Empty.ino}]
+void setup(){
+    pinMode(LED_BUILTIN,OUTPUT);
+}
+void loop(){
+}
+\end{lstlisting}
+\section*{Task 2} 
+Make \color{red} internal LED \color{black} blink using the \color{blue} delay() \color{black}function\\
+\begin{todolist}
+    \item Files $\rightarrow$ Examples $\rightarrow$ 01.Basics $\rightarrow$ Blink
+    \item Save file
+    \item Upload Sketch
+    \item Read the code. 
+    \item Play with the code
+\end{todolist}
+You may also use Blink.ino \\
+.ino files must be inside a folder to upload.
+\begin{lstlisting}[language=C++, caption={Blink.ino}]
+void setup(){
+    pinMode(LED_BUILTIN,OUTPUT);
+}
+void loop(){
+    digitalWrite(LED_BUILTIN,HIGH);
+    delay(400);
+    digitalWrite(LED_BUILTIN,LOW);
+    delay(400);
+}
+\end{lstlisting}
+\section*{Task 3}
+Make \color{red} internal LED \color{black} blink \textbf{without} using \color{blue} delay() \color{black} function. \\
+Recall that \color{blue} delay() \color{black} function stop code execution. 
+\begin{todolist}
+    \item Load or Copy noDelayLED.ino 
+    \item Upload Sketch 
+\end{todolist}
+As one can see the results are similar to Task 2. We used the function \color{blue} millis() \color{black} conditional statements. 
+\begin{lstlisting}[language=C++, caption={noDelayLED.ino}]
+int previousLEDstate = LOW;
+unsigned long lastTime = 0; 
+int interval = 400; 
+void setup(){
+    pinMode(LED_BUILTIN,OUTPUT);
+}
+void loop(){
+    unsigned long currentTime = millis();
+    if(currentTime - lastTime >= interval){
+        lastTime = currentTime;
+        if(previousLEDstate == HIGH){
+            digitalWrite(LED_BUILTIN,LOW);
+            previousLEDstate = LOW;
+        }
+        else{
+            digitalWrite(LED_BUILTIN,HIGH);
+            previousLEDstate = HIGH;
+        }
+    }
+}
+\end{lstlisting}
+\section*{Task 4}
+We will connect an \color{red} external LED \color{black} using the arduino nano. Making the LED blink using the \color{blue} delay() \color{black} function. 
+\begin{todolist}
+    \item Find Digital Pin 13 (D13) 
+    \item Connect jumper wire from digital pin (D13) to resistor. (duinokit has built in resistor. Connect to positive pin) 
+    \item DuinoKit has (+) anode and (-) cathode labeled. Generally the positive side is the longest leg of LED. 
+    \item The GND (ground) should be connected to the (-) cathode
+    \item Since (D13) is the LED\_BUILTIN. Refer to task 2. 
+    \item If you use a pin other than D13. Change LED\_BUITIN to the pin number you are using. 
+    \item extLED.ino assumes we use digital pin 2 (D2). Follow steps above. 
+\end{todolist}
+\begin{lstlisting}[language=c++,caption={extLED.ino}]
+int LED = 2; 
+void setup(){
+    pinMode(LED,OUTPUT);
+}
+void loop(){
+    digitalWrite(LED,HIGH);
+    delay(400);
+    digitalWrite(LED,LOW);
+    delay(400);
+}
+\end{lstlisting}
+You may also use code from task 3 so that \color{blue} delay()\color{black} is not used. 
+\section*{Task 5}
+Using PWM - Pulse Width Modulation to dim an LED. \\
+Only certain pins have PWM. Pins 3, 5, 6, 9, 10, and 11. 
+\begin{todolist}
+    \item Connect Digital pin 3 (D3) To (+) anode
+    \item Connect GND to  (-) cathode.  
+    \item Load or copy extLEDfade.ino into the Arduino IDE. 
+    \item Upload Sketch 
+\end{todolist}
+analogWrite() functions will only work on PWM pins. 
+\begin{lstlisting}[language=c++,caption={extLEDfade.ino}]
+int LED = 3; 
+void setup(){
+	pinMode(LED,OUTPUT);
+}
+
+void loop(){
+  for(int i = 0; i < 256; i++){
+    analogWrite(LED,i);
+    delay(5);
+  }
+ for(int i = 255; i >= 0; i--){
+    analogWrite(LED,i);
+    delay(5);
+ }
+}
+\end{lstlisting}
+\section*{Summary}
+We have defined and introduced functions. In Task 1 we set up the Arduino and made sure it was responding the our computer. In Task 2 the internal LED we programmed the microcontroller to make the LED blink. delay() function stops execution. In Task 3 we made the LED blink withouth the delay() function. In Task 4 we set up an external LED. Task 5 introduced PWM - Pulse Width Modulation, this was used to dim an LED. 
+\end{document}
