@@ -15,7 +15,7 @@ The Firmware Electronics Engineering team was officially created 11-29-2018
 - Projects
 ## Members 
 Fall 2018 
-- Ramiro Gonzalez 
+- **Ramiro Gonzalez**
 - Nikko Solon 
 - Hoa Nguyen 
 - Sidharth Babu
