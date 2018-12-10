@@ -7,4 +7,4 @@ Meetings will consist of going through or creating the files. Meetings may be ph
 ## December 06, 2018
 ### 02 - Arduino: Builtin Functions & Definitions 
 ## December 13, 2018 
-### 03 - Part 1: Functions, Definitions and Electronic Components 
+### 03 - Part 1: Definitions, Functions and Electronic Components 
