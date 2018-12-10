@@ -4,6 +4,7 @@
 - Arduino Programming: Introduction & Global Variables 
 ## December 13, 2018 
 - LED Playground 
+- Code
 ## Organizational Conventions
 - Minor projects are to be organized by date of delivery. 
   * Documentation
