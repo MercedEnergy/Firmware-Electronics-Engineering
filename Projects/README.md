@@ -5,6 +5,8 @@
 ## December 13, 2018 
 - LED Playground 
 - Code
+## Duino Kit - Tiny 
+- Ongoing 
 ## Organizational Conventions
 - Minor projects are to be organized by date of delivery. 
   * Documentation
