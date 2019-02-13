@@ -6,6 +6,7 @@
 - LED Playground 
 - Code
 ## Duino Kit - Tiny 
+- Duino Kit Starter Guide 
 - Ongoing 
 ## Organizational Conventions
 - Minor projects are to be organized by date of delivery. 
